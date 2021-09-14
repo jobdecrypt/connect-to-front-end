@@ -1,0 +1,15 @@
+# docker image for mongodb
+# this image includes EXPOSE 27017 (the mongodb port),
+# so standard container linking will make it
+# automatically available to the linked containers
+
+$ docker run -p 27017:27017 --name badbank -d mongo
+
+# to check if it's running run:
+$ docker ps
+
+# npm package, https://www.npmjs.com/package/mongodb
+$ npm install mongodb
+
+# changed the createaccount.js "function handle" on the public file
+# changed the alldata.js "function alldata" and add a React.useEffect on the public file
